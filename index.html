@@ -24,7 +24,6 @@
             margin: 0 auto;
         }
 
-        /* Header */
         .header {
             background: white;
             border-radius: 8px;
@@ -39,13 +38,6 @@
             color: #0097a7;
         }
 
-        .header p {
-            font-size: 16px;
-            color: #718096;
-            margin-bottom: 20px;
-        }
-
-        /* Week Selector */
         .week-selector {
             background: white;
             border-radius: 8px;
@@ -89,7 +81,6 @@
             border-color: #0097a7;
         }
 
-        /* Week Display */
         .week-display {
             display: none;
         }
@@ -98,7 +89,6 @@
             display: block;
         }
 
-        /* Phase Badge */
         .phase-badge {
             display: inline-block;
             padding: 6px 14px;
@@ -139,7 +129,6 @@
             border: 1px solid #f9e79f;
         }
 
-        /* Daily Sessions */
         .daily-schedule {
             display: grid;
             gap: 20px;
@@ -282,70 +271,11 @@
             color: #276749;
         }
 
-        /* Load Table */
-        .load-table {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
-
-        .load-table h3 {
-            background: #f8fafc;
-            padding: 15px 20px;
+        .accessories-header {
+            font-weight: 600;
             color: #0097a7;
-            font-size: 16px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th {
-            background: #f8fafc;
-            padding: 12px;
-            text-align: left;
-            font-weight: 600;
-            color: #1a202c;
-            border-bottom: 2px solid #e2e8f0;
-            font-size: 13px;
-        }
-
-        td {
-            padding: 12px;
-            border-bottom: 1px solid #e2e8f0;
-            font-size: 14px;
-        }
-
-        tr:hover {
-            background: #f8fafc;
-        }
-
-        tr:last-child td {
-            border-bottom: none;
-        }
-
-        .lift-name {
-            font-weight: 600;
-            color: #1a202c;
-        }
-
-        /* Utilities */
-        .text-muted {
-            color: #718096;
-        }
-
-        .text-small {
-            font-size: 13px;
-        }
-
-        .highlight-week5 {
-            background: #fffbeb;
-            border: 1px solid #f6e05e;
+            margin-bottom: 10px;
+            margin-top: 15px;
         }
 
         @media (max-width: 768px) {
@@ -356,26 +286,16 @@
             .week-buttons {
                 grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
             }
-
-            table {
-                font-size: 12px;
-            }
-
-            th, td {
-                padding: 8px;
-            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <div class="header">
             <h1>🚣 Hall Strength — Block 1 (8-Week Complete Plan)</h1>
             <p>Frances Angulo | Weeks 14–21 | Strength + Aerobic Power</p>
         </div>
 
-        <!-- Week Selector -->
         <div class="week-selector">
             <h2>Select Your Week</h2>
             <div class="week-buttons">
@@ -390,12 +310,10 @@
             </div>
         </div>
 
-        <!-- Week 14 -->
+        <!-- WEEK 14 -->
         <div id="week-14" class="week-display active">
             <div class="phase-badge phase-accumulation">📈 Week 14: Accumulation — 5×5 @ 70%</div>
-
             <div class="daily-schedule">
-                <!-- Monday -->
                 <div class="day-card">
                     <div class="day-header">
                         <span class="day-name">Monday</span>
@@ -417,7 +335,6 @@
                     </div>
                 </div>
 
-                <!-- Tuesday -->
                 <div class="day-card">
                     <div class="day-header">
                         <span class="day-name">Tuesday</span>
@@ -436,30 +353,25 @@
                                 </div>
                                 <div class="detail-item">
                                     <div class="detail-label">Bench Press</div>
-                                    <div class="detail-value">91 lb (70% of 130 lb) — ACROSS (same load every set)</div>
+                                    <div class="detail-value">91 lb (70%) — ACROSS</div>
                                 </div>
                                 <div class="detail-item">
                                     <div class="detail-label">Weighted Pull-Up</div>
-                                    <div class="detail-value">17.5 lb (70% of 25 lb) — ACROSS (same load every set)</div>
+                                    <div class="detail-value">17.5 lb (70%) — ACROSS</div>
                                 </div>
                             </div>
-                            <div style="margin-top: 15px;">
-                                <div style="font-weight: 600; color: #0097a7; margin-bottom: 10px;">Accessory Work:</div>
-                                <div class="exercise-item">
-                                    <div class="exercise-name">DB Chest Supported Row</div>
-                                    <div class="exercise-detail">3×8-10 | BUILDING (add load across sets)</div>
-                                    <div class="exercise-detail">2 RIR on final set. Full range, no momentum, feel the lat</div>
-                                </div>
-                                <div class="exercise-item">
-                                    <div class="exercise-name">DB Shoulder Press</div>
-                                    <div class="exercise-detail">3×10 | ACROSS</div>
-                                    <div class="exercise-detail">2 RIR. Controlled. No barbell overhead this block</div>
-                                </div>
-                                <div class="exercise-item">
-                                    <div class="exercise-name">Face Pulls / Band Pull Apart</div>
-                                    <div class="exercise-detail">3×15 | ACROSS (light, consistent)</div>
-                                    <div class="exercise-detail">2 RIR. Non-negotiable. Shoulder health = longevity on the erg</div>
-                                </div>
+                            <div class="accessories-header">Accessory Work:</div>
+                            <div class="exercise-item">
+                                <div class="exercise-name">DB Chest Supported Row</div>
+                                <div class="exercise-detail">3×8-10 | BUILDING | 2 RIR on final set</div>
+                            </div>
+                            <div class="exercise-item">
+                                <div class="exercise-name">DB Shoulder Press</div>
+                                <div class="exercise-detail">3×10 | ACROSS | 2 RIR</div>
+                            </div>
+                            <div class="exercise-item">
+                                <div class="exercise-name">Face Pulls / Band Pull Apart</div>
+                                <div class="exercise-detail">3×15 | ACROSS | 2 RIR</div>
                             </div>
                         </div>
                         <div class="session-block">
@@ -467,17 +379,10 @@
                                 <span class="session-badge badge-erg">Erg</span>
                                 Hall Strength Erg W14 S5
                             </div>
-                            <div class="session-details">
-                                <div class="detail-item">
-                                    <div class="detail-label">Intensity</div>
-                                    <div class="detail-value">Moderate — support strength session</div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Wednesday -->
                 <div class="day-card">
                     <div class="day-header">
                         <span class="day-name">Wednesday</span>
@@ -492,18 +397,17 @@
                             <div class="session-details">
                                 <div class="detail-item">
                                     <div class="detail-label">HR Ceiling</div>
-                                    <div class="detail-value">Under 139 BPM (entire session)</div>
+                                    <div class="detail-value">Under 139 BPM</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Thursday -->
                 <div class="day-card">
                     <div class="day-header">
                         <span class="day-name">Thursday</span>
-                        <span style="font-size: 14px;">Session B (PRIMARY STRENGTH DAY)</span>
+                        <span style="font-size: 14px;">Session B (PRIMARY)</span>
                     </div>
                     <div class="day-content">
                         <div class="session-block">
@@ -518,26 +422,21 @@
                                 </div>
                                 <div class="detail-item">
                                     <div class="detail-label">Back Squat</div>
-                                    <div class="detail-value">154 lb (70% of 220 lb) — ACROSS (same load every set)</div>
+                                    <div class="detail-value">154 lb (70%) — ACROSS</div>
                                 </div>
                             </div>
-                            <div style="margin-top: 15px;">
-                                <div style="font-weight: 600; color: #0097a7; margin-bottom: 10px;">Accessory Work:</div>
-                                <div class="exercise-item">
-                                    <div class="exercise-name">Romanian Deadlift</div>
-                                    <div class="exercise-detail">3×8 | ACROSS</div>
-                                    <div class="exercise-detail">2 RIR. 60% of DL 1RM (165 lb). Strict form, controlled descent</div>
-                                </div>
-                                <div class="exercise-item">
-                                    <div class="exercise-name">Bulgarian Split Squat</div>
-                                    <div class="exercise-detail">3×8 each | BUILDING (add load if form allows)</div>
-                                    <div class="exercise-detail">2 RIR on final set. Focus on hip stability and range</div>
-                                </div>
-                                <div class="exercise-item">
-                                    <div class="exercise-name">Hanging Knee Raise</div>
-                                    <div class="exercise-detail">3×12 | ACROSS</div>
-                                    <div class="exercise-detail">2 RIR. Core stability — not a fatigue exercise</div>
-                                </div>
+                            <div class="accessories-header">Accessory Work:</div>
+                            <div class="exercise-item">
+                                <div class="exercise-name">Romanian Deadlift</div>
+                                <div class="exercise-detail">3×8 | ACROSS | 2 RIR | 60% of 1RM</div>
+                            </div>
+                            <div class="exercise-item">
+                                <div class="exercise-name">Bulgarian Split Squat</div>
+                                <div class="exercise-detail">3×8 each | BUILDING | 2 RIR on final set</div>
+                            </div>
+                            <div class="exercise-item">
+                                <div class="exercise-name">Hanging Knee Raise</div>
+                                <div class="exercise-detail">3×12 | ACROSS | 2 RIR</div>
                             </div>
                             <div class="coaching-note">
                                 <strong>Key Day:</strong> Protect this. Arrive recovered and fuelled.
@@ -546,11 +445,10 @@
                     </div>
                 </div>
 
-                <!-- Friday -->
                 <div class="day-card">
                     <div class="day-header">
                         <span class="day-name">Friday</span>
-                        <span style="font-size: 14px;">Zone 2 (Protects Saturday)</span>
+                        <span style="font-size: 14px;">Zone 2</span>
                     </div>
                     <div class="day-content">
                         <div class="session-block">
@@ -558,17 +456,10 @@
                                 <span class="session-badge badge-recovery">Recovery</span>
                                 Zone 2 — 45–90 minutes
                             </div>
-                            <div class="session-details">
-                                <div class="detail-item">
-                                    <div class="detail-label">HR Ceiling</div>
-                                    <div class="detail-value">Under 139 BPM (entire session)</div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Saturday -->
                 <div class="day-card">
                     <div class="day-header">
                         <span class="day-name">Saturday</span>
@@ -583,57 +474,46 @@
                             <div class="session-details">
                                 <div class="detail-item">
                                     <div class="detail-label">Front Squat</div>
-                                    <div class="detail-value">116 lb (75–80% of back squat: 154 lb) — ACROSS</div>
+                                    <div class="detail-value">116 lb (75-80%) — ACROSS</div>
                                 </div>
                                 <div class="detail-item">
                                     <div class="detail-label">DB Incline Bench Press</div>
-                                    <div class="detail-value">3×6-8 | BUILDING (add load across sets) | 2 RIR on final set. Upper chest and shoulder stability</div>
+                                    <div class="detail-value">3×6-8 | BUILDING</div>
                                 </div>
                             </div>
-                            <div style="margin-top: 15px;">
-                                <div style="font-weight: 600; color: #0097a7; margin-bottom: 10px;">Accessory Work:</div>
-                                <div class="exercise-item">
-                                    <div class="exercise-name">Banded Wide Grip Pull-Up</div>
-                                    <div class="exercise-detail">3×8-10 | ACROSS</div>
-                                    <div class="exercise-detail">2 RIR. Full range. Own the range of motion</div>
-                                </div>
-                                <div class="exercise-item">
-                                    <div class="exercise-name">SA 3-Point Stance DB Row</div>
-                                    <div class="exercise-detail">3×8-10 each | ACROSS</div>
-                                    <div class="exercise-detail">2 RIR. Full lat range, no momentum, no rotation</div>
-                                </div>
-                                <div class="exercise-item">
-                                    <div class="exercise-name">Kickstance DB RDL</div>
-                                    <div class="exercise-detail">3×8 each | ACROSS</div>
-                                    <div class="exercise-detail">2 RIR. Unilateral hinge — glute and hamstring without spinal fatigue</div>
-                                </div>
-                                <div class="exercise-item">
-                                    <div class="exercise-name">Plank</div>
-                                    <div class="exercise-detail">3×40-45 sec | ACROSS</div>
-                                    <div class="exercise-detail">Brace like you're about to drive the erg. That is the standard</div>
-                                </div>
+                            <div class="accessories-header">Accessory Work:</div>
+                            <div class="exercise-item">
+                                <div class="exercise-name">Banded Wide Grip Pull-Up</div>
+                                <div class="exercise-detail">3×8-10 | ACROSS | 2 RIR</div>
+                            </div>
+                            <div class="exercise-item">
+                                <div class="exercise-name">SA 3-Point Stance DB Row</div>
+                                <div class="exercise-detail">3×8-10 each | ACROSS | 2 RIR</div>
+                            </div>
+                            <div class="exercise-item">
+                                <div class="exercise-name">Kickstance DB RDL</div>
+                                <div class="exercise-detail">3×8 each | ACROSS | 2 RIR</div>
+                            </div>
+                            <div class="exercise-item">
+                                <div class="exercise-name">Plank</div>
+                                <div class="exercise-detail">3×40-45 sec | ACROSS</div>
                             </div>
                         </div>
                         <div class="session-block">
                             <div class="session-title">
                                 <span class="session-badge badge-erg">Erg</span>
-                                Custom Sprint — Power / Explosive
+                                Custom Sprint
                             </div>
                             <div class="session-details">
                                 <div class="detail-item">
                                     <div class="detail-label">Type</div>
-                                    <div class="detail-value">10 × 5 max effort strokes (per Erg Sessions canvas)</div>
-                                </div>
-                                <div class="detail-item">
-                                    <div class="detail-label">Recovery</div>
-                                    <div class="detail-value">Max recovery when ready</div>
+                                    <div class="detail-value">10 × 5 max effort strokes</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Sunday -->
                 <div class="day-card">
                     <div class="day-header">
                         <span class="day-name">Sunday</span>
@@ -650,10 +530,6 @@
                                     <div class="detail-label">Type</div>
                                     <div class="detail-value">Structured intervals at 2K pace</div>
                                 </div>
-                                <div class="detail-item">
-                                    <div class="detail-label">Quality</div>
-                                    <div class="detail-value">High quality, not junk volume</div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -661,294 +537,716 @@
             </div>
         </div>
 
-        <!-- Weeks 15-21: Condensed View (Same structure as Week 14, loads change per phase) -->
+        <!-- WEEK 15 -->
         <div id="week-15" class="week-display">
             <div class="phase-badge phase-accumulation">📈 Week 15: Accumulation — 5×5 @ 75%</div>
-            <p style="color: #718096; margin-bottom: 20px;">Session structure same as Week 14. Loads increase to 75%.</p>
-            <div style="background: white; border-radius: 8px; padding: 20px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Lift</th>
-                            <th>Load (75%)</th>
-                            <th>Week 14 (70%)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="lift-name">Bench Press</td>
-                            <td>98 lb</td>
-                            <td>91 lb</td>
-                        </tr>
-                        <tr>
-                            <td class="lift-name">Back Squat</td>
-                            <td>165 lb</td>
-                            <td>154 lb</td>
-                        </tr>
-                        <tr>
-                            <td class="lift-name">Weighted Pull-Up</td>
-                            <td>19 lb</td>
-                            <td>17.5 lb</td>
-                        </tr>
-                        <tr>
-                            <td class="lift-name">Front Squat</td>
-                            <td>124-132 lb</td>
-                            <td>116 lb</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="daily-schedule">
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Monday</span><span style="font-size: 14px;">Erg S1</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W15 S1</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Tuesday</span><span style="font-size: 14px;">Session A → Erg S5</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session A — Upper Body</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Sets × Reps / Loads</div><div class="detail-value">5×5 | Bench: 98 lb | Pull-Up: 19 lb (both 75%)</div></div>
+                            </div>
+                            <div class="accessories-header">Accessory Work:</div>
+                            <div class="exercise-item"><div class="exercise-name">DB Chest Supported Row • 3×8-10 | BUILDING</div></div>
+                            <div class="exercise-item"><div class="exercise-name">DB Shoulder Press • 3×10 | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Face Pulls / Band Pull Apart • 3×15 | ACROSS</div></div>
+                        </div>
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W15 S5</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Wednesday</span><span style="font-size: 14px;">Zone 2</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-recovery">Recovery</span>Zone 2 — 45–90 min | HR < 139 BPM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Thursday</span><span style="font-size: 14px;">Session B (PRIMARY)</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session B — Lower Body</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Sets × Reps / Loads</div><div class="detail-value">5×5 | Back Squat: 165 lb (75%)</div></div>
+                            </div>
+                            <div class="accessories-header">Accessory Work:</div>
+                            <div class="exercise-item"><div class="exercise-name">Romanian Deadlift • 3×8 | ACROSS | 2 RIR</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Bulgarian Split Squat • 3×8 each | BUILDING</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Hanging Knee Raise • 3×12 | ACROSS</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Friday</span><span style="font-size: 14px;">Zone 2</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-recovery">Recovery</span>Zone 2 — 45–90 min | HR < 139 BPM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Saturday</span><span style="font-size: 14px;">Session C → Custom Sprint</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session C — Full Body</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Loads</div><div class="detail-value">Front Squat: 124-132 lb | DB Incline Bench: 3×6-8 BUILDING</div></div>
+                            </div>
+                            <div class="accessories-header">Accessory Work:</div>
+                            <div class="exercise-item"><div class="exercise-name">Banded Wide Grip Pull-Up • 3×8-10 | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">SA 3-Point Stance DB Row • 3×8-10 each | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Kickstance DB RDL • 3×8 each | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Plank • 3×40-45 sec | ACROSS</div></div>
+                        </div>
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Custom Sprint — 10 × 5 max strokes</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Sunday</span><span style="font-size: 14px;">Erg S3</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W15 S3</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p style="margin-top: 20px; color: #718096; font-size: 13px;">📋 <strong>All accessory work stays the same as Week 14.</strong> Headline lifts increase per phase progression table.</p>
         </div>
 
-        <!-- Week 16 -->
+        <!-- WEEK 16 -->
         <div id="week-16" class="week-display">
             <div class="phase-badge phase-intensification">🔥 Week 16: Intensification — 4×4 @ 80%</div>
-            <div style="background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);">
-                <h3 style="color: #0097a7; margin-bottom: 15px;">Load Changes</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Lift</th>
-                            <th>Week 15 (75%)</th>
-                            <th>Week 16 (80%)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="lift-name">Bench Press</td>
-                            <td>98 lb</td>
-                            <td>104 lb</td>
-                        </tr>
-                        <tr>
-                            <td class="lift-name">Back Squat</td>
-                            <td>165 lb</td>
-                            <td>176 lb</td>
-                        </tr>
-                        <tr>
-                            <td class="lift-name">Weighted Pull-Up</td>
-                            <td>19 lb</td>
-                            <td>20.5 lb</td>
-                        </tr>
-                        <tr>
-                            <td class="lift-name">Front Squat</td>
-                            <td>124-132 lb</td>
-                            <td>141 lb</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="daily-schedule">
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Monday</span><span style="font-size: 14px;">Erg S1</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W16 S1</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Tuesday</span><span style="font-size: 14px;">Session A → Erg S5</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session A — Upper Body</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Sets × Reps / Loads</div><div class="detail-value">4×4 | Bench: 104 lb | Pull-Up: 20.5 lb (both 80%)</div></div>
+                            </div>
+                            <div class="accessories-header">Accessory Work:</div>
+                            <div class="exercise-item"><div class="exercise-name">DB Chest Supported Row • 3×8-10 | BUILDING</div></div>
+                            <div class="exercise-item"><div class="exercise-name">DB Shoulder Press • 3×10 | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Face Pulls / Band Pull Apart • 3×15 | ACROSS</div></div>
+                            <div class="coaching-note"><strong>Intensification begins:</strong> Execution must be clean. If the bar looks ugly, load is too heavy.</div>
+                        </div>
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W16 S5</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Wednesday</span><span style="font-size: 14px;">Zone 2</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-recovery">Recovery</span>Zone 2 — 45–90 min | HR < 139 BPM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Thursday</span><span style="font-size: 14px;">Session B (PRIMARY)</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session B — Lower Body</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Sets × Reps / Loads</div><div class="detail-value">4×4 | Back Squat: 176 lb (80%)</div></div>
+                            </div>
+                            <div class="accessories-header">Accessory Work:</div>
+                            <div class="exercise-item"><div class="exercise-name">Romanian Deadlift • 3×8 | ACROSS | 2 RIR</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Bulgarian Split Squat • 3×8 each | BUILDING</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Hanging Knee Raise • 3×12 | ACROSS</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Friday</span><span style="font-size: 14px;">Zone 2</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-recovery">Recovery</span>Zone 2 — 45–90 min | HR < 139 BPM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Saturday</span><span style="font-size: 14px;">Session C → Custom Sprint</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session C — Full Body</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Loads</div><div class="detail-value">Front Squat: 141 lb | DB Incline Bench: 3×6-8 BUILDING</div></div>
+                            </div>
+                            <div class="accessories-header">Accessory Work:</div>
+                            <div class="exercise-item"><div class="exercise-name">Banded Wide Grip Pull-Up • 3×8-10 | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">SA 3-Point Stance DB Row • 3×8-10 each | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Kickstance DB RDL • 3×8 each | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Plank • 3×40-45 sec | ACROSS</div></div>
+                        </div>
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Custom Sprint — 10 × 5 max strokes</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Sunday</span><span style="font-size: 14px;">Erg S3</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W16 S3</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p style="color: #718096; font-size: 13px;">📋 <strong>All accessory work stays the same.</strong> Sets drop to 4×4 for headline lifts. Execution must be clean.</p>
         </div>
 
-        <!-- Week 17 -->
+        <!-- WEEK 17 -->
         <div id="week-17" class="week-display">
             <div class="phase-badge phase-intensification">🔥 Week 17: Intensification — 4×4 @ 84%</div>
-            <div style="background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);">
-                <h3 style="color: #0097a7; margin-bottom: 15px;">Load Changes</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Lift</th>
-                            <th>Week 16 (80%)</th>
-                            <th>Week 17 (84%)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="lift-name">Bench Press</td>
-                            <td>104 lb</td>
-                            <td>110 lb</td>
-                        </tr>
-                        <tr>
-                            <td class="lift-name">Back Squat</td>
-                            <td>176 lb</td>
-                            <td>185 lb</td>
-                        </tr>
-                        <tr>
-                            <td class="lift-name">Weighted Pull-Up</td>
-                            <td>20.5 lb</td>
-                            <td>22 lb</td>
-                        </tr>
-                        <tr>
-                            <td class="lift-name">Front Squat</td>
-                            <td>141 lb</td>
-                            <td>148 lb</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="daily-schedule">
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Monday</span><span style="font-size: 14px;">Erg S1</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W17 S1</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Tuesday</span><span style="font-size: 14px;">Session A → Erg S5</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session A — Upper Body</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Sets × Reps / Loads</div><div class="detail-value">4×4 | Bench: 110 lb | Pull-Up: 22 lb (both 84%)</div></div>
+                            </div>
+                            <div class="accessories-header">Accessory Work:</div>
+                            <div class="exercise-item"><div class="exercise-name">DB Chest Supported Row • 3×8-10 | BUILDING</div></div>
+                            <div class="exercise-item"><div class="exercise-name">DB Shoulder Press • 3×10 | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Face Pulls / Band Pull Apart • 3×15 | ACROSS</div></div>
+                        </div>
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W17 S5</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Wednesday</span><span style="font-size: 14px;">Zone 2</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-recovery">Recovery</span>Zone 2 — 45–90 min | HR < 139 BPM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Thursday</span><span style="font-size: 14px;">Session B (PRIMARY)</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session B — Lower Body</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Sets × Reps / Loads</div><div class="detail-value">4×4 | Back Squat: 185 lb (84%)</div></div>
+                            </div>
+                            <div class="accessories-header">Accessory Work:</div>
+                            <div class="exercise-item"><div class="exercise-name">Romanian Deadlift • 3×8 | ACROSS | 2 RIR</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Bulgarian Split Squat • 3×8 each | BUILDING</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Hanging Knee Raise • 3×12 | ACROSS</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Friday</span><span style="font-size: 14px;">Zone 2</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-recovery">Recovery</span>Zone 2 — 45–90 min | HR < 139 BPM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Saturday</span><span style="font-size: 14px;">Session C → Custom Sprint</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session C — Full Body</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Loads</div><div class="detail-value">Front Squat: 148 lb | DB Incline Bench: 3×6-8 BUILDING</div></div>
+                            </div>
+                            <div class="accessories-header">Accessory Work:</div>
+                            <div class="exercise-item"><div class="exercise-name">Banded Wide Grip Pull-Up • 3×8-10 | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">SA 3-Point Stance DB Row • 3×8-10 each | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Kickstance DB RDL • 3×8 each | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Plank • 3×40-45 sec | ACROSS</div></div>
+                        </div>
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Custom Sprint — 10 × 5 max strokes</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Sunday</span><span style="font-size: 14px;">Erg S3</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W17 S3</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p style="color: #718096; font-size: 13px;">📋 <strong>All accessory work stays the same.</strong> Final intensification push before deload.</p>
         </div>
 
-        <!-- Week 18 (Deload) -->
-        <div id="week-18" class="week-display highlight-week5">
-            <div class="phase-badge phase-deload">⚡ Week 18: DELOAD — 3×5 @ 65% (RECOVERY WEEK)</div>
+        <!-- WEEK 18 (DELOAD) -->
+        <div id="week-18" class="week-display">
+            <div class="phase-badge phase-deload">⚡ Week 18: DELOAD — 3×5 @ 65%</div>
             <div style="background: #fffbeb; border: 1px solid #f6e05e; border-radius: 8px; padding: 15px; margin-bottom: 20px;">
-                <strong style="color: #b7791f;">⚠️ DELOAD WEEK RULES:</strong> Do not skip this week. Do not add sessions or intensity. Your body is consolidating. Same movements, lighter loads. Trust the process.
+                <strong style="color: #b7791f;">⚠️ DELOAD WEEK:</strong> Do not skip. Do not add sessions. Body consolidation. Trust the process.
             </div>
-            <div style="background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);">
-                <h3 style="color: #0097a7; margin-bottom: 15px;">Deload Loads</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Lift</th>
-                            <th>Week 17 (84%)</th>
-                            <th>Week 18 (65%)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="lift-name">Bench Press</td>
-                            <td>110 lb</td>
-                            <td>85 lb</td>
-                        </tr>
-                        <tr>
-                            <td class="lift-name">Back Squat</td>
-                            <td>185 lb</td>
-                            <td>143 lb</td>
-                        </tr>
-                        <tr>
-                            <td class="lift-name">Weighted Pull-Up</td>
-                            <td>22 lb</td>
-                            <td>16 lb</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="daily-schedule">
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Monday</span><span style="font-size: 14px;">Erg S1</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W18 S1</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Tuesday</span><span style="font-size: 14px;">Session A → Erg S5</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session A — Upper Body</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Sets × Reps / Loads</div><div class="detail-value">3×5 | Bench: 85 lb | Pull-Up: 16 lb (both 65%)</div></div>
+                            </div>
+                            <div class="accessories-header">Accessory Work (Reduced):</div>
+                            <div class="exercise-item"><div class="exercise-name">DB Chest Supported Row • 3×8-10 | BUILDING | Lighter load</div></div>
+                            <div class="exercise-item"><div class="exercise-name">DB Shoulder Press • 3×10 | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Face Pulls / Band Pull Apart • 3×15 | ACROSS</div></div>
+                        </div>
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W18 S5</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Wednesday</span><span style="font-size: 14px;">Zone 2</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-recovery">Recovery</span>Zone 2 — 45–90 min | HR < 139 BPM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Thursday</span><span style="font-size: 14px;">Session B (Deload)</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session B — Lower Body</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Sets × Reps / Loads</div><div class="detail-value">3×5 | Back Squat: 143 lb (65%)</div></div>
+                            </div>
+                            <div class="accessories-header">Accessory Work (Reduced):</div>
+                            <div class="exercise-item"><div class="exercise-name">Romanian Deadlift • 3×8 | ACROSS | Lighter load</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Bulgarian Split Squat • 3×8 each | BUILDING | Lighter</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Hanging Knee Raise • 3×12 | ACROSS</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Friday</span><span style="font-size: 14px;">Zone 2</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-recovery">Recovery</span>Zone 2 — 45–90 min | HR < 139 BPM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Saturday</span><span style="font-size: 14px;">Session C (Deload)</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session C — Full Body</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Loads</div><div class="detail-value">Front Squat: 114 lb | DB Incline Bench: Lighter load</div></div>
+                            </div>
+                            <div class="accessories-header">Accessory Work (Reduced):</div>
+                            <div class="exercise-item"><div class="exercise-name">Banded Wide Grip Pull-Up • 3×8-10 | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">SA 3-Point Stance DB Row • 3×8-10 each | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Kickstance DB RDL • 3×8 each | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Plank • 3×40-45 sec | ACROSS</div></div>
+                        </div>
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Custom Sprint — Reduced intensity</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Sunday</span><span style="font-size: 14px;">Erg S3</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W18 S3</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p style="color: #718096; font-size: 13px;">📋 <strong>Accessory work at reduced intensity.</strong> Same exercises, same structure, lighter loading. Consolidation week.</p>
         </div>
 
-        <!-- Week 19 -->
+        <!-- WEEK 19 (STRENGTH PHASE) -->
         <div id="week-19" class="week-display">
             <div class="phase-badge phase-strength">💪 Week 19: Strength — 3×3 @ 87%</div>
             <div style="background: #edf2f7; border: 1px solid #cbd5e0; border-radius: 8px; padding: 15px; margin-bottom: 20px;">
-                <strong style="color: #2d3748;">💡 Serious Phase Begins:</strong> Sleep and nutrition become critical variables. You've recovered. Now you push hard.
+                <strong style="color: #2d3748;">💡 Serious Phase:</strong> Sleep and nutrition become critical. You've recovered. Now push hard.
             </div>
-            <div style="background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);">
-                <h3 style="color: #0097a7; margin-bottom: 15px;">New Loads (After Deload)</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Lift</th>
-                            <th>Week 18 (65%)</th>
-                            <th>Week 19 (87%)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="lift-name">Bench Press</td>
-                            <td>85 lb</td>
-                            <td>114 lb</td>
-                        </tr>
-                        <tr>
-                            <td class="lift-name">Back Squat</td>
-                            <td>143 lb</td>
-                            <td>192 lb</td>
-                        </tr>
-                        <tr>
-                            <td class="lift-name">Weighted Pull-Up</td>
-                            <td>16 lb</td>
-                            <td>23 lb</td>
-                        </tr>
-                        <tr>
-                            <td class="lift-name">Front Squat</td>
-                            <td>114 lb</td>
-                            <td>164 lb</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="daily-schedule">
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Monday</span><span style="font-size: 14px;">Erg S1</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W19 S1</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Tuesday</span><span style="font-size: 14px;">Session A → Erg S5</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session A — Upper Body</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Sets × Reps / Loads</div><div class="detail-value">3×3 | Bench: 114 lb | Pull-Up: 23 lb (both 87%)</div></div>
+                            </div>
+                            <div class="accessories-header">Accessory Work:</div>
+                            <div class="exercise-item"><div class="exercise-name">DB Chest Supported Row • 3×8-10 | BUILDING</div></div>
+                            <div class="exercise-item"><div class="exercise-name">DB Shoulder Press • 3×10 | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Face Pulls / Band Pull Apart • 3×15 | ACROSS</div></div>
+                        </div>
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W19 S5</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Wednesday</span><span style="font-size: 14px;">Zone 2</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-recovery">Recovery</span>Zone 2 — 45–90 min | HR < 139 BPM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Thursday</span><span style="font-size: 14px;">Session B (PRIMARY)</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session B — Lower Body</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Sets × Reps / Loads</div><div class="detail-value">3×3 | Back Squat: 192 lb (87%)</div></div>
+                            </div>
+                            <div class="accessories-header">Accessory Work:</div>
+                            <div class="exercise-item"><div class="exercise-name">Romanian Deadlift • 3×8 | ACROSS | 2 RIR</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Bulgarian Split Squat • 3×8 each | BUILDING</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Hanging Knee Raise • 3×12 | ACROSS</div></div>
+                            <div class="coaching-note"><strong>Strength phase:</strong> Heavy, controlled reps. Perfect form is non-negotiable.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Friday</span><span style="font-size: 14px;">Zone 2</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-recovery">Recovery</span>Zone 2 — 45–90 min | HR < 139 BPM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Saturday</span><span style="font-size: 14px;">Session C → Custom Sprint</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session C — Full Body</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Loads</div><div class="detail-value">Front Squat: 164 lb | DB Incline Bench: 3×6-8 BUILDING</div></div>
+                            </div>
+                            <div class="accessories-header">Accessory Work:</div>
+                            <div class="exercise-item"><div class="exercise-name">Banded Wide Grip Pull-Up • 3×8-10 | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">SA 3-Point Stance DB Row • 3×8-10 each | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Kickstance DB RDL • 3×8 each | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Plank • 3×40-45 sec | ACROSS</div></div>
+                        </div>
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Custom Sprint — 10 × 5 max strokes</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Sunday</span><span style="font-size: 14px;">Erg S3</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W19 S3</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p style="color: #718096; font-size: 13px;">📋 <strong>Accessory work continues as normal.</strong> Headline lifts drop to 3×3 at 87% intensity.</p>
         </div>
 
-        <!-- Week 20 -->
+        <!-- WEEK 20 (PEAK) -->
         <div id="week-20" class="week-display">
             <div class="phase-badge phase-peak">🚀 Week 20: Peak — 2×2 @ 95%</div>
             <div style="background: #fef5e7; border: 1px solid #f9e79f; border-radius: 8px; padding: 15px; margin-bottom: 20px;">
-                <strong style="color: #7d6608;">🎯 Peak Week Approach:</strong> You're moving heavy, heavy weight. Sets of 2. Focus on staying fresh and explosive.
+                <strong style="color: #7d6608;">🎯 Peak Week:</strong> Heavy weight, sets of 2. Stay fresh and explosive. Keep accessories moderate.
             </div>
-            <div style="background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);">
-                <h3 style="color: #0097a7; margin-bottom: 15px;">Peak Loads</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Lift</th>
-                            <th>Week 19 (87%)</th>
-                            <th>Week 20 (95%)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="lift-name">Bench Press</td>
-                            <td>114 lb</td>
-                            <td>124 lb</td>
-                        </tr>
-                        <tr>
-                            <td class="lift-name">Back Squat</td>
-                            <td>192 lb</td>
-                            <td>210 lb</td>
-                        </tr>
-                        <tr>
-                            <td class="lift-name">Weighted Pull-Up</td>
-                            <td>23 lb</td>
-                            <td>25 lb</td>
-                        </tr>
-                        <tr>
-                            <td class="lift-name">Front Squat</td>
-                            <td>164 lb</td>
-                            <td>176 lb</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="daily-schedule">
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Monday</span><span style="font-size: 14px;">Erg S1</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W20 S1</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Tuesday</span><span style="font-size: 14px;">Session A → Erg S5</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session A — Upper Body</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Sets × Reps / Loads</div><div class="detail-value">2×2 | Bench: 124 lb | Pull-Up: 25 lb (both 95%)</div></div>
+                            </div>
+                            <div class="accessories-header">Accessory Work (Moderate):</div>
+                            <div class="exercise-item"><div class="exercise-name">DB Chest Supported Row • 3×8-10 | BUILDING</div></div>
+                            <div class="exercise-item"><div class="exercise-name">DB Shoulder Press • 3×10 | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Face Pulls / Band Pull Apart • 3×15 | ACROSS</div></div>
+                        </div>
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W20 S5 (Light)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Wednesday</span><span style="font-size: 14px;">Zone 2 (Short)</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-recovery">Recovery</span>Zone 2 — 30–45 min | HR < 139 BPM | Keep it short</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Thursday</span><span style="font-size: 14px;">Session B (PEAK)</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session B — Lower Body</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Sets × Reps / Loads</div><div class="detail-value">2×2 | Back Squat: 210 lb (95%)</div></div>
+                            </div>
+                            <div class="accessories-header">Accessory Work (Moderate):</div>
+                            <div class="exercise-item"><div class="exercise-name">Romanian Deadlift • 3×8 | ACROSS | 2 RIR</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Bulgarian Split Squat • 3×8 each | BUILDING</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Hanging Knee Raise • 3×12 | ACROSS</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Friday</span><span style="font-size: 14px;">Zone 2 (Short)</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-recovery">Recovery</span>Zone 2 — 30–45 min | HR < 139 BPM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Saturday</span><span style="font-size: 14px;">Session C (Peak)</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session C — Full Body</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Loads</div><div class="detail-value">Front Squat: 176 lb | DB Incline Bench: Moderate load</div></div>
+                            </div>
+                            <div class="accessories-header">Accessory Work (Moderate):</div>
+                            <div class="exercise-item"><div class="exercise-name">Banded Wide Grip Pull-Up • 3×8-10 | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">SA 3-Point Stance DB Row • 3×8-10 each | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Kickstance DB RDL • 3×8 each | ACROSS</div></div>
+                            <div class="exercise-item"><div class="exercise-name">Plank • 3×40-45 sec | ACROSS</div></div>
+                        </div>
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Custom Sprint (Light)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Sunday</span><span style="font-size: 14px;">Erg S3 (Moderate)</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W20 S3</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Note</div><div class="detail-value">Keep volume moderate. Prioritize quality over quantity.</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p style="color: #718096; font-size: 13px;">📋 <strong>Accessory work at moderate intensity.</strong> Headline lifts drop to 2×2. Keep Zone 2 sessions short (30-45 min).</p>
         </div>
 
-        <!-- Week 21 (PB Week) -->
+        <!-- WEEK 21 (PB WEEK) -->
         <div id="week-21" class="week-display">
             <div class="phase-badge phase-peak">🏆 Week 21: PB WEEK — Singles @ 100%+</div>
             <div style="background: #fff5f5; border: 1px solid #feb2b2; border-radius: 8px; padding: 15px; margin-bottom: 20px;">
-                <strong style="color: #c53030;">🎯 PB WEEK PROTOCOL:</strong> All three headline lifts tested. Back Squat, Bench Press, Weighted Pull-Up. Come in fresh, fuelled, and ready to go after numbers you have never hit before. This is your moment.
+                <strong style="color: #c53030;">🎯 PB WEEK PROTOCOL:</strong> All three headline lifts tested. Back Squat, Bench Press, Weighted Pull-Up. Come in fresh, fuelled, ready.
             </div>
-            <div style="background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);">
-                <h3 style="color: #0097a7; margin-bottom: 15px;">Your Targets</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Lift</th>
-                            <th>Current 1RM</th>
-                            <th>Target (100%+)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="lift-name">Back Squat</td>
-                            <td>220 lb</td>
-                            <td>220+ lb</td>
-                        </tr>
-                        <tr>
-                            <td class="lift-name">Bench Press</td>
-                            <td>130 lb</td>
-                            <td>130+ lb</td>
-                        </tr>
-                        <tr>
-                            <td class="lift-name">Weighted Pull-Up</td>
-                            <td>25 lb @ 3RM</td>
-                            <td>25+ lb</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="daily-schedule">
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Monday</span><span style="font-size: 14px;">Erg S1</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W21 S1</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Purpose</div><div class="detail-value">Warm-up, activation — prepare for the week</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Tuesday</span><span style="font-size: 14px;">Session A (Light)</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session A — Upper Body (PB Prep)</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Type</div><div class="detail-value">Light movement prep — NOT heavy</div></div>
+                                <div class="detail-item"><div class="detail-label">Test</div><div class="detail-value">Bench Press: target 130+ lb | Weighted Pull-Up: target 25+ lb</div></div>
+                            </div>
+                            <div class="accessories-header">Minimal Accessory (Light):</div>
+                            <div class="exercise-item"><div class="exercise-name">Light warm-up work only — no heavy accessories</div></div>
+                            <div class="coaching-note"><strong>Come in fresh.</strong> Proper warm-up. Take time between attempts. Quality movement.</div>
+                        </div>
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W21 S5 (Very Light)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Wednesday</span><span style="font-size: 14px;">Rest or Easy</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-recovery">Recovery</span>Easy movement — no structured training</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Focus</div><div class="detail-value">Sleep, nutrition, mental prep</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Thursday</span><span style="font-size: 14px;">Session B (PB ATTEMPT)</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session B — Lower Body (PB WEEK)</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Type</div><div class="detail-value">Back Squat — Singles, building to max</div></div>
+                                <div class="detail-item"><div class="detail-label">Target</div><div class="detail-value">Test your new PB (target: 220+ lb)</div></div>
+                            </div>
+                            <div class="coaching-note"><strong>The most important day of the block.</strong> 8 weeks of strength. This is where you cash the check. Come in fuelled, focused, ready.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Friday</span><span style="font-size: 14px;">Rest or Easy</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-recovery">Recovery</span>Easy movement — recovery only</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Saturday</span><span style="font-size: 14px;">Session C (Light)</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-strength">Strength</span>Session C — Full Body (Technical Work)</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Type</div><div class="detail-value">Light technical work — feel good, move well</div></div>
+                            </div>
+                            <div class="accessories-header">Light Movement Only:</div>
+                            <div class="exercise-item"><div class="exercise-name">Technical work — no heavy loading</div></div>
+                        </div>
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Custom Sprint (Very Light)</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Intensity</div><div class="detail-value">Activation only</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header"><span class="day-name">Sunday</span><span style="font-size: 14px;">Erg S3 (Celebration)</span></div>
+                    <div class="day-content">
+                        <div class="session-block">
+                            <div class="session-title"><span class="session-badge badge-erg">Erg</span>Hall Strength Erg W21 S3</div>
+                            <div class="session-details">
+                                <div class="detail-item"><div class="detail-label">Type</div><div class="detail-value">Celebrate the block. Execute with intent but enjoy the work.</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <div style="background: #f0fff4; border: 1px solid #9ae6b4; border-radius: 8px; padding: 15px; margin-top: 20px;">
-                <strong style="color: #276749;">📈 WHAT COMES NEXT:</strong> Block 2 shifts into a power phase — plyometrics, jumps, and explosive work. The strength you build here is what Block 2 converts into rate of force development. That is the quality that wins the 1-minute record. <strong>Strength first. Power second. Record third.</strong>
+                <strong style="color: #276749;">📈 WHAT COMES NEXT:</strong> Block 2 shifts into power phase — plyometrics, jumps, explosive work. Strength from Block 1 converts to rate of force development. That's what wins the 1-minute record. <strong>Strength first. Power second. Record third.</strong>
             </div>
         </div>
 
-        <!-- Footer -->
         <div style="background: white; border-radius: 8px; padding: 20px; margin-top: 30px; text-align: center; color: #718096; font-size: 13px;">
-            <p style="margin-bottom: 10px;"><strong>The 8-Week Path</strong></p>
-            <p>Weeks 1–2: Build patterns at load. Weeks 3–4: Climb harder. Week 5: Recover. Weeks 6–7: Serious phase. Week 8: Test your new personal bests.</p>
+            <p><strong>The 8-Week Path</strong></p>
+            <p>Weeks 1–2: Build patterns. Weeks 3–4: Climb harder. Week 5: Recover. Weeks 6–7: Serious. Week 8: Test PBs.</p>
             <p style="margin-top: 15px; border-top: 1px solid #e2e8f0; padding-top: 15px;">
                 Hall Strength | <a href="http://hallstrength.com" style="color: #0097a7; text-decoration: none;">hallstrength.com</a> | @hall_strength
             </p>
@@ -957,22 +1255,13 @@
 
     <script>
         function showWeek(weekNum) {
-            // Hide all weeks
             const weeks = document.querySelectorAll('.week-display');
             weeks.forEach(week => week.classList.remove('active'));
-
-            // Show selected week
             const selectedWeek = document.getElementById(`week-${weekNum}`);
-            if (selectedWeek) {
-                selectedWeek.classList.add('active');
-            }
-
-            // Update button states
+            if (selectedWeek) selectedWeek.classList.add('active');
             const buttons = document.querySelectorAll('.week-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
-
-            // Scroll to top of week display
             selectedWeek.scrollIntoView({ behavior: 'smooth' });
         }
     </script>
