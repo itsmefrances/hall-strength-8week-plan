@@ -561,10 +561,18 @@
             </div>
         </div>
 
-        <!-- TODAY: SUN MAY 24 -->
-        <div class="panel">
-            <h2>🎯 Today — Sun May 24 (pre-Murph prep)</h2>
-            <div class="day-card" style="box-shadow: none; border: 1px solid #e2e8f0;">
+        <!-- TODAY'S WORKOUT (dynamic) -->
+        <div class="panel" id="today-panel">
+            <h2 id="today-heading">🎯 Today's Workout</h2>
+            <div id="today-workout-container"></div>
+            <div id="today-fallback" style="display: none; color: #4a5568; font-size: 14px;">
+                <p>No scheduled workout for today. This plan runs <strong>Sun May 24 → Sun Jun 21, 2026</strong>. Pick a week below to view its schedule.</p>
+            </div>
+        </div>
+
+        <!-- HIDDEN: pre-plan prep day so JS can surface it on May 24 -->
+        <div id="prep-day-source" style="display: none;">
+            <div class="day-card" style="box-shadow: none; border: 1px solid #e2e8f0;" data-date="2026-05-24">
                 <div class="day-header build-day">
                     <span class="day-name">Sun May 24</span>
                     <span class="day-tag">PRE-MURPH PREP</span>
@@ -607,7 +615,7 @@
             <div class="phase-badge phase-race">🔥 Week 1: Race-week management — Murph + Hyrox Doubles</div>
             <div class="daily-schedule">
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-05-25">
                     <div class="day-header race-day">
                         <span class="day-name">Mon May 25</span>
                         <span class="day-tag">MURPH</span>
@@ -631,7 +639,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-05-26">
                     <div class="day-header">
                         <span class="day-name">Tue May 26</span>
                         <span class="day-tag">Z1 ROW + MOBILITY</span>
@@ -653,7 +661,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-05-27">
                     <div class="day-header">
                         <span class="day-name">Wed May 27</span>
                         <span class="day-tag">UPPER LIFT</span>
@@ -677,7 +685,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-05-28">
                     <div class="day-header">
                         <span class="day-name">Thu May 28</span>
                         <span class="day-tag">Z2 ROW + PICKUPS</span>
@@ -698,7 +706,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-05-29">
                     <div class="day-header">
                         <span class="day-name">Fri May 29</span>
                         <span class="day-tag">ACTIVATION + PRIMER</span>
@@ -720,7 +728,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-05-30">
                     <div class="day-header rest-day">
                         <span class="day-name">Sat May 30</span>
                         <span class="day-tag">OFF / PRE-RACE</span>
@@ -741,7 +749,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-05-31">
                     <div class="day-header race-day">
                         <span class="day-name">Sun May 31</span>
                         <span class="day-tag">HYROX DOUBLES</span>
@@ -773,7 +781,7 @@
             <div class="phase-badge phase-recovery">🌿 Week 2: Recovery + Race 2 — Period likely starts ~Jun 1</div>
             <div class="daily-schedule">
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-01">
                     <div class="day-header rest-day">
                         <span class="day-name">Mon Jun 1</span>
                         <span class="day-tag">OFF / EASY</span>
@@ -794,7 +802,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-02">
                     <div class="day-header">
                         <span class="day-name">Tue Jun 2</span>
                         <span class="day-tag">Z2 + LIGHT LOWER</span>
@@ -817,7 +825,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-03">
                     <div class="day-header build-day">
                         <span class="day-name">Wed Jun 3</span>
                         <span class="day-tag">PEAK POWER INTRO + UPPER</span>
@@ -843,7 +851,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-04">
                     <div class="day-header">
                         <span class="day-name">Thu Jun 4</span>
                         <span class="day-tag">Z1 RECOVERY</span>
@@ -864,7 +872,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-05">
                     <div class="day-header">
                         <span class="day-name">Fri Jun 5</span>
                         <span class="day-tag">ACTIVATION + PRIMER</span>
@@ -883,7 +891,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-06">
                     <div class="day-header race-day">
                         <span class="day-name">Sat Jun 6</span>
                         <span class="day-tag">HYROX DOUBLES</span>
@@ -904,7 +912,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-07">
                     <div class="day-header rest-day">
                         <span class="day-name">Sun Jun 7</span>
                         <span class="day-tag">OFF / WALK</span>
@@ -931,7 +939,7 @@
             <div class="phase-badge phase-build">🚀 Week 3: Development opens — PP + AnC intro</div>
             <div class="daily-schedule">
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-08">
                     <div class="day-header build-day">
                         <span class="day-name">Mon Jun 8</span>
                         <span class="day-tag">PEAK POWER + LIGHT LOWER</span>
@@ -956,7 +964,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-09">
                     <div class="day-header">
                         <span class="day-name">Tue Jun 9</span>
                         <span class="day-tag">Z2 + UPPER</span>
@@ -980,7 +988,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-10">
                     <div class="day-header test-day">
                         <span class="day-name">Wed Jun 10</span>
                         <span class="day-tag">AnC #1 — KEY TEST</span>
@@ -1005,7 +1013,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-11">
                     <div class="day-header">
                         <span class="day-name">Thu Jun 11</span>
                         <span class="day-tag">Z1 RECOVERY</span>
@@ -1025,7 +1033,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-12">
                     <div class="day-header build-day">
                         <span class="day-name">Fri Jun 12</span>
                         <span class="day-tag">POWER LIFT DAY</span>
@@ -1050,7 +1058,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-13">
                     <div class="day-header test-day">
                         <span class="day-name">Sat Jun 13</span>
                         <span class="day-tag">LT INTRO + SPRINT</span>
@@ -1075,7 +1083,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-14">
                     <div class="day-header">
                         <span class="day-name">Sun Jun 14</span>
                         <span class="day-tag">LONG Z2</span>
@@ -1103,7 +1111,7 @@
             <div class="phase-badge phase-test">🎯 Week 4: AnC progression + VO₂max + partial test</div>
             <div class="daily-schedule">
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-15">
                     <div class="day-header test-day">
                         <span class="day-name">Mon Jun 15</span>
                         <span class="day-tag">AnC #2</span>
@@ -1126,7 +1134,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-16">
                     <div class="day-header">
                         <span class="day-name">Tue Jun 16</span>
                         <span class="day-tag">Z2 + UPPER</span>
@@ -1148,7 +1156,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-17">
                     <div class="day-header test-day">
                         <span class="day-name">Wed Jun 17</span>
                         <span class="day-tag">VO₂MAX</span>
@@ -1172,7 +1180,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-18">
                     <div class="day-header">
                         <span class="day-name">Thu Jun 18</span>
                         <span class="day-tag">Z1 + POSTERIOR CHAIN</span>
@@ -1193,7 +1201,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-19">
                     <div class="day-header build-day">
                         <span class="day-name">Fri Jun 19</span>
                         <span class="day-tag">SPEED / POWER</span>
@@ -1218,7 +1226,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-20">
                     <div class="day-header test-day">
                         <span class="day-name">Sat Jun 20</span>
                         <span class="day-tag">RACE-SPECIFIC TEST</span>
@@ -1243,7 +1251,7 @@
                     </div>
                 </div>
 
-                <div class="day-card">
+                <div class="day-card" data-date="2026-06-21">
                     <div class="day-header">
                         <span class="day-name">Sun Jun 21</span>
                         <span class="day-tag">LONG Z2</span>
@@ -1723,8 +1731,8 @@
             const selected = document.getElementById('week-' + weekNum);
             if (selected) selected.classList.add('active');
             document.querySelectorAll('.week-selector .week-btn').forEach(b => b.classList.remove('active'));
-            evt.currentTarget.classList.add('active');
-            if (selected) selected.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            if (evt && evt.currentTarget) evt.currentTarget.classList.add('active');
+            if (selected && evt) selected.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
         function showArchiveWeek(evt, weekNum) {
@@ -1735,6 +1743,68 @@
             archiveButtons.forEach(b => b.classList.remove('active'));
             evt.currentTarget.classList.add('active');
         }
+
+        // ----- Today's Workout: auto-populate from today's date -----
+        function todayISO() {
+            const d = new Date();
+            const y = d.getFullYear();
+            const m = String(d.getMonth() + 1).padStart(2, '0');
+            const day = String(d.getDate()).padStart(2, '0');
+            return y + '-' + m + '-' + day;
+        }
+
+        function weekForDate(iso) {
+            if (iso >= '2026-05-25' && iso <= '2026-05-31') return 1;
+            if (iso >= '2026-06-01' && iso <= '2026-06-07') return 2;
+            if (iso >= '2026-06-08' && iso <= '2026-06-14') return 3;
+            if (iso >= '2026-06-15' && iso <= '2026-06-21') return 4;
+            return null;
+        }
+
+        function formatHeadingDate(iso) {
+            // iso = YYYY-MM-DD; build a Date in local time (no UTC drift)
+            const [y, m, d] = iso.split('-').map(Number);
+            const date = new Date(y, m - 1, d);
+            return date.toLocaleDateString(undefined, {
+                weekday: 'long', month: 'long', day: 'numeric'
+            });
+        }
+
+        function renderTodaysWorkout() {
+            const container = document.getElementById('today-workout-container');
+            const fallback = document.getElementById('today-fallback');
+            const heading = document.getElementById('today-heading');
+            if (!container || !heading) return;
+
+            const iso = todayISO();
+            const source = document.querySelector('.day-card[data-date="' + iso + '"]');
+
+            if (source) {
+                const clone = source.cloneNode(true);
+                clone.removeAttribute('style');
+                container.innerHTML = '';
+                container.appendChild(clone);
+                heading.textContent = "🎯 Today's Workout — " + formatHeadingDate(iso);
+                fallback.style.display = 'none';
+
+                // Auto-select the matching week tab
+                const w = weekForDate(iso);
+                if (w) {
+                    document.querySelectorAll('.week-display').forEach(el => el.classList.remove('active'));
+                    const weekEl = document.getElementById('week-' + w);
+                    if (weekEl) weekEl.classList.add('active');
+                    document.querySelectorAll('.week-selector .week-btn').forEach((btn, idx) => {
+                        btn.classList.toggle('active', (idx + 1) === w);
+                    });
+                }
+            } else {
+                container.innerHTML = '';
+                heading.textContent = "🎯 Today's Workout — " + formatHeadingDate(iso);
+                fallback.style.display = 'block';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', renderTodaysWorkout);
     </script>
 </body>
 </html>
