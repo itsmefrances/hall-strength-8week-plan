@@ -1754,11 +1754,12 @@
         }
 
         function weekForDate(iso) {
-            if (iso >= '2026-05-25' && iso <= '2026-05-31') return 1;
-            if (iso >= '2026-06-01' && iso <= '2026-06-07') return 2;
-            if (iso >= '2026-06-08' && iso <= '2026-06-14') return 3;
-            if (iso >= '2026-06-15' && iso <= '2026-06-21') return 4;
-            return null;
+            // Pre-plan dates (incl. May 24 prep) and Week 1 both select Week 1.
+            // Dates past Jun 21 stick on the final week so something sensible shows.
+            if (iso <= '2026-05-31') return 1;
+            if (iso <= '2026-06-07') return 2;
+            if (iso <= '2026-06-14') return 3;
+            return 4;
         }
 
         function formatHeadingDate(iso) {
@@ -1786,22 +1787,21 @@
                 container.appendChild(clone);
                 heading.textContent = "🎯 Today's Workout — " + formatHeadingDate(iso);
                 fallback.style.display = 'none';
-
-                // Auto-select the matching week tab
-                const w = weekForDate(iso);
-                if (w) {
-                    document.querySelectorAll('.week-display').forEach(el => el.classList.remove('active'));
-                    const weekEl = document.getElementById('week-' + w);
-                    if (weekEl) weekEl.classList.add('active');
-                    document.querySelectorAll('.week-selector .week-btn').forEach((btn, idx) => {
-                        btn.classList.toggle('active', (idx + 1) === w);
-                    });
-                }
             } else {
                 container.innerHTML = '';
                 heading.textContent = "🎯 Today's Workout — " + formatHeadingDate(iso);
                 fallback.style.display = 'block';
             }
+
+            // Always auto-select the matching week tab (works even when there's
+            // no card for today, e.g. pre-plan or post-plan dates).
+            const w = weekForDate(iso);
+            document.querySelectorAll('.week-display').forEach(el => el.classList.remove('active'));
+            const weekEl = document.getElementById('week-' + w);
+            if (weekEl) weekEl.classList.add('active');
+            document.querySelectorAll('.week-selector .week-btn').forEach((btn, idx) => {
+                btn.classList.toggle('active', (idx + 1) === w);
+            });
         }
 
         document.addEventListener('DOMContentLoaded', renderTodaysWorkout);
