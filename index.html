@@ -63,44 +63,63 @@
             margin: 18px 0 8px;
         }
 
-        .zone-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 13px;
+        .zone-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 12px;
         }
 
-        .zone-table th,
-        .zone-table td {
-            text-align: left;
-            padding: 10px 12px;
-            border-bottom: 1px solid #e2e8f0;
-            vertical-align: top;
-        }
-
-        .zone-table thead th {
+        .zone-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 14px 16px;
             background: #f8fafc;
-            color: #2d3748;
-            font-weight: 600;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.03em;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
         }
 
-        .zone-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .zone-table td:first-child {
-            font-weight: 600;
+        .zone-card .zone-name {
+            font-weight: 700;
             color: #1a202c;
-            white-space: nowrap;
+            font-size: 14px;
         }
 
-        .zone-table td:nth-child(2) {
+        .zone-card .zone-pace {
             font-variant-numeric: tabular-nums;
             color: #c53030;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 0.01em;
+        }
+
+        .zone-card .zone-pace .pace-unit {
+            font-size: 12px;
+            color: #718096;
             font-weight: 600;
-            white-space: nowrap;
+            margin-left: 4px;
+        }
+
+        .zone-card .zone-feel {
+            font-size: 13px;
+            color: #2d3748;
+            line-height: 1.45;
+        }
+
+        .zone-card .zone-hr {
+            font-size: 12px;
+            font-weight: 600;
+            color: #2b6cb0;
+            background: #ebf8ff;
+            padding: 3px 8px;
+            border-radius: 4px;
+            align-self: flex-start;
+            margin-top: 2px;
+        }
+
+        .zone-card .zone-hr.no-hr {
+            background: #edf2f7;
+            color: #718096;
         }
 
         .rpe-note {
@@ -505,48 +524,38 @@
         <!-- REFERENCE: ZONES & PACES -->
         <div class="panel">
             <h2>📊 Zone &amp; Intensity Reference</h2>
-            <table class="zone-table">
-                <thead>
-                    <tr>
-                        <th>Zone / Session</th>
-                        <th>Pace /500m</th>
-                        <th>Feel</th>
-                        <th>HR target</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Z1 (true easy)</td>
-                        <td>2:18–2:25</td>
-                        <td>Nose-breathe if possible. Fully conversational. Could read on the erg. RPE 2–3.</td>
-                        <td>&lt;142</td>
-                    </tr>
-                    <tr>
-                        <td>Z2 (aerobic)</td>
-                        <td>2:10–2:18</td>
-                        <td>Short conversational sentences. Mild diaphragmatic breathing. RPE 4–5.</td>
-                        <td>&lt;155</td>
-                    </tr>
-                    <tr>
-                        <td>VO₂max (3' reps)</td>
-                        <td>1:59–2:02</td>
-                        <td>Hard but holdable. Heavy breathing by min 2. Could finish rep 4. RPE 8.</td>
-                        <td>—</td>
-                    </tr>
-                    <tr>
-                        <td>AnC race-pace (30–60s)</td>
-                        <td>1:32–1:34</td>
-                        <td>Race-effort. "Could I hold this for 60s? Just barely." RPE 9.</td>
-                        <td>—</td>
-                    </tr>
-                    <tr>
-                        <td>Peak Power (5–10 strokes)</td>
-                        <td>≤1:32</td>
-                        <td>Pure aggression. Each stroke maximal. Not endurance.</td>
-                        <td>—</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="zone-grid">
+                <div class="zone-card">
+                    <div class="zone-name">Z1 — true easy</div>
+                    <div class="zone-pace">2:18–2:25<span class="pace-unit">/500m</span></div>
+                    <div class="zone-feel">Nose-breathe if possible. Fully conversational. Could read on the erg. RPE 2–3.</div>
+                    <div class="zone-hr">HR &lt; 142</div>
+                </div>
+                <div class="zone-card">
+                    <div class="zone-name">Z2 — aerobic</div>
+                    <div class="zone-pace">2:10–2:18<span class="pace-unit">/500m</span></div>
+                    <div class="zone-feel">Short conversational sentences. Mild diaphragmatic breathing. RPE 4–5.</div>
+                    <div class="zone-hr">HR &lt; 155</div>
+                </div>
+                <div class="zone-card">
+                    <div class="zone-name">VO₂max — 3' reps</div>
+                    <div class="zone-pace">1:59–2:02<span class="pace-unit">/500m</span></div>
+                    <div class="zone-feel">Hard but holdable. Heavy breathing by min 2. Could finish rep 4. RPE 8.</div>
+                    <div class="zone-hr no-hr">No HR target</div>
+                </div>
+                <div class="zone-card">
+                    <div class="zone-name">AnC — race pace, 30–60s</div>
+                    <div class="zone-pace">1:32–1:34<span class="pace-unit">/500m</span></div>
+                    <div class="zone-feel">Race-effort. "Could I hold this for 60s? Just barely." RPE 9.</div>
+                    <div class="zone-hr no-hr">No HR target</div>
+                </div>
+                <div class="zone-card">
+                    <div class="zone-name">Peak Power — 5–10 strokes</div>
+                    <div class="zone-pace">≤ 1:32<span class="pace-unit">/500m</span></div>
+                    <div class="zone-feel">Pure aggression. Each stroke maximal. Not endurance.</div>
+                    <div class="zone-hr no-hr">No HR target</div>
+                </div>
+            </div>
             <div class="rpe-note">
                 <strong>Lifting RPE shorthand:</strong> RPE 7 = 3 reps in reserve · RPE 8 = 2 in reserve · RPE 9 = 1 in reserve. Power-intent reps should look fast — if a rep grinds, the load is too heavy.
             </div>
