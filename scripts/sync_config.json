@@ -1,0 +1,19 @@
+{
+  "_comment": "Configuration for the Concept2 -> results.json sync. week_14_monday is the Monday of plan Week 14 — adjust if the block starts a different week.",
+  "week_14_monday": "2026-06-08",
+  "first_week": 14,
+  "last_week": 21,
+  "slots": {
+    "S1": { "day": 0, "kind": "s1", "label": "Erg S1" },
+    "S5": { "day": 1, "kind": "s5", "label": "Erg S5" },
+    "Z2-WED": { "day": 2, "kind": "z2", "label": "Zone 2 (Wednesday)" },
+    "Z2-FRI": { "day": 4, "kind": "z2", "label": "Zone 2 (Friday)" },
+    "SPRINT": { "day": 5, "kind": "sprint", "label": "Custom Sprint" },
+    "S3": { "day": 6, "kind": "s3", "label": "Erg S3" }
+  },
+  "week_slot_overrides": {
+    "21": ["S1", "S5", "SPRINT", "S3"]
+  },
+  "zone2_hr_ceiling": 145,
+  "min_fallback_minutes": 10
+}

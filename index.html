@@ -278,6 +278,52 @@
             margin-top: 15px;
         }
 
+        .result-strip {
+            background: #f0fff4;
+            border: 1px solid #9ae6b4;
+            border-left: 3px solid #38a169;
+            border-radius: 6px;
+            padding: 10px 14px;
+            margin-top: 8px;
+            font-size: 13px;
+            color: #22543d;
+        }
+
+        .result-strip .result-check {
+            font-weight: 700;
+            color: #276749;
+            margin-right: 6px;
+        }
+
+        .result-strip .result-stats {
+            color: #2f855a;
+        }
+
+        .result-strip a {
+            color: #0097a7;
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 8px;
+            white-space: nowrap;
+        }
+
+        .result-strip .result-note {
+            display: block;
+            margin-top: 4px;
+            font-size: 12px;
+            color: #38a169;
+        }
+
+        .session-block.completed .session-title {
+            color: #276749;
+        }
+
+        #c2-sync-status {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #a0aec0;
+        }
+
         @media (max-width: 768px) {
             .day-header {
                 font-size: 16px;
@@ -1250,6 +1296,7 @@
             <p style="margin-top: 15px; border-top: 1px solid #e2e8f0; padding-top: 15px;">
                 Hall Strength | <a href="http://hallstrength.com" style="color: #0097a7; text-decoration: none;">hallstrength.com</a> | @hall_strength
             </p>
+            <p id="c2-sync-status"></p>
         </div>
     </div>
 
@@ -1264,6 +1311,81 @@
             event.target.classList.add('active');
             selectedWeek.scrollIntoView({ behavior: 'smooth' });
         }
+
+        // ----- Concept2 results overlay -----
+        // data/results.json is kept up to date by .github/workflows/sync-concept2.yml,
+        // which pulls from the Concept2 Logbook API and matches workouts to the
+        // erg sessions prescribed for each week (any day within the week counts).
+
+        function slotForSession(title, dayName) {
+            if (/\bS1\b/.test(title)) return 'S1';
+            if (/\bS5\b/.test(title)) return 'S5';
+            if (/\bS3\b/.test(title)) return 'S3';
+            if (/custom sprint/i.test(title)) return 'SPRINT';
+            if (/zone 2/i.test(title)) return dayName === 'WEDNESDAY' ? 'Z2-WED' : 'Z2-FRI';
+            return null;
+        }
+
+        function renderResult(m) {
+            const strip = document.createElement('div');
+            strip.className = 'result-strip';
+
+            const when = new Date(m.date.replace(' ', 'T'));
+            const dateText = isNaN(when) ? m.date : when.toLocaleDateString(undefined,
+                { weekday: 'short', month: 'short', day: 'numeric' });
+
+            const stats = [];
+            if (m.distance_m) stats.push(`${m.distance_m.toLocaleString()}m`);
+            if (m.time_display) stats.push(m.time_display);
+            if (m.pace_per_500m) stats.push(`${m.pace_per_500m}/500m`);
+            if (m.stroke_rate) stats.push(`${m.stroke_rate} spm`);
+            if (m.avg_hr) stats.push(`HR ${m.avg_hr}`);
+
+            strip.innerHTML =
+                `<span class="result-check">✓ Completed ${dateText}</span>` +
+                `<span class="result-stats">${stats.join(' · ')}</span>` +
+                (m.logbook_url ? `<a href="${m.logbook_url}" target="_blank" rel="noopener">View log ↗</a>` : '') +
+                (m.matched_by === 'closest-day' ? `<span class="result-note">auto-matched to the nearest open session this week</span>` : '');
+            return strip;
+        }
+
+        async function loadConcept2Results() {
+            const statusEl = document.getElementById('c2-sync-status');
+            let data;
+            try {
+                const resp = await fetch(`data/results.json?t=${Date.now()}`);
+                if (!resp.ok) throw new Error(resp.status);
+                data = await resp.json();
+            } catch (e) {
+                if (statusEl) statusEl.textContent = 'Concept2 sync: no data yet';
+                return;
+            }
+
+            const matches = data.matches || {};
+            document.querySelectorAll('.week-display').forEach(weekEl => {
+                const week = weekEl.id.replace('week-', '');
+                weekEl.querySelectorAll('.day-card').forEach(card => {
+                    const dayName = (card.querySelector('.day-name')?.textContent || '').trim().toUpperCase();
+                    card.querySelectorAll('.session-block').forEach(block => {
+                        const titleEl = block.querySelector('.session-title');
+                        if (!titleEl || titleEl.querySelector('.badge-strength')) return;
+                        const slot = slotForSession(titleEl.textContent, dayName);
+                        const match = slot && matches[`W${week}-${slot}`];
+                        if (!match) return;
+                        block.classList.add('completed');
+                        block.appendChild(renderResult(match));
+                    });
+                });
+            });
+
+            if (statusEl) {
+                statusEl.textContent = data.synced_at
+                    ? `Concept2 logbook sync: last updated ${new Date(data.synced_at).toLocaleString()}`
+                    : 'Concept2 sync: connected, awaiting first sync';
+            }
+        }
+
+        loadConcept2Results();
     </script>
 </body>
 </html>
