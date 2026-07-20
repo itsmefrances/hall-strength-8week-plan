@@ -2,6 +2,8 @@
 
 Training plan site for weeks 14–21 (strength + aerobic power), published via GitHub Pages from `index.html`.
 
+> This repo also hosts an unrelated automation: the **[UWS Instagram news bot](newsbot/README.md)** (`newsbot/` + `.github/workflows/newsbot.yml`), which auto-posts new I Love The Upper West Side articles to Instagram.
+
 ## Concept2 logbook sync
 
 Erg sessions on the site are automatically marked **✓ Completed** — with distance, time, pace, stroke rate, HR, and a link to the logbook entry — by pulling results from the [Concept2 Logbook API](https://log.concept2.com/developers/documentation/).

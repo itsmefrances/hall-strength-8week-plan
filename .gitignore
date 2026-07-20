@@ -1,3 +1,5 @@
 __pycache__/
 *.pyc
 .c2_new_refresh_token
+.env
+newsbot/.env
